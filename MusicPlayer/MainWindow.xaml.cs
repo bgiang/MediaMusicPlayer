@@ -12,17 +12,54 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+
 
 namespace MusicPlayer
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
+           
+            ResizeMode = ResizeMode.NoResize;
+
             InitializeComponent();
         }
+        private void Play_Click(object sender, RoutedEventArgs e)
+        {
+            
+            Song.Content = "Play";
+            
+        }
+
+        private void Browse_Click(object sender, RoutedEventArgs e)
+        {
+            
+            OpenFileDialog File = new OpenFileDialog();
+
+           
+
+            if (File.ShowDialog() != null)
+            {
+                try
+                {
+                    Song.Content = File.SafeFileName;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
+        }
+
+        
+       
     }
 }
