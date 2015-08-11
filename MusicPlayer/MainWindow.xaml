@@ -1,8 +1,7 @@
 ﻿<Window x:Class="MusicPlayer.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MusicPlayer" Height="450" Width="800
-        ">
+        Title="MusicPlayer" Height="450" Width="812.126">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50*"/>
@@ -19,9 +18,10 @@
             <Label Content="No File Selected" HorizontalAlignment="Left" Margin="1,182,0,0" VerticalAlignment="Top" Width="164" Name="Song"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="420" Grid.RowSpan="2" VerticalAlignment="Top" Width="622">
-        <ScrollViewer HorizontalAlignment="Left" Height="410" VerticalAlignment="Top" Width="622" Grid.RowSpan="2">
+       
+                <MediaElement Height="324" Width="576" Name="SongPlayer" LoadedBehavior="Manual"/>
 
-        </ScrollViewer>
+            
         </Grid>
     </Grid>
 </Window>

@@ -51,6 +51,8 @@ namespace MusicPlayer
                 try
                 {
                     Song.Content = File.SafeFileName;
+                    SongPlayer.Source = new Uri(File.FileName);
+                    SongPlayer.Play();
                 }
                 catch (Exception ex)
                 {
