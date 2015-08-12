@@ -15,13 +15,17 @@
             <Image Source="default.jpg" Stretch="Fill" Margin="1,0,0,243"/>
             <TextBox HorizontalAlignment="Left" Height="23" Margin="1,275,0,0" TextWrapping="Wrap" Text="Select Song" VerticalAlignment="Top" Width="164" Name="Select"/>
             <Button Content="Browse" HorizontalAlignment="Left" Height="30" Margin="1,303,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="-0.509,-0.806" Name="Browse" Click="Browse_Click"/>
-            <Label Content="No File Selected" HorizontalAlignment="Left" Margin="1,182,0,0" VerticalAlignment="Top" Width="164" Name="Song"/>
         </Grid>
         <Grid HorizontalAlignment="Left" Height="420" Grid.RowSpan="2" VerticalAlignment="Top" Width="622">
-       
-                <MediaElement Height="324" Width="576" Name="SongPlayer" LoadedBehavior="Manual"/>
+            <Label Content="No File Selected" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="576" Name="Song"/>
 
-            
+            <MediaElement Height="324" Width="576" Name="SongPlayer" LoadedBehavior="Manual" Margin="23,36,23,60"/>
+            <Label Content="" HorizontalAlignment="Left" Margin="509,365,0,0" VerticalAlignment="Top" Width="90" Name="Total"/>
+            <Label Content="00:00" HorizontalAlignment="Left" Margin="23,362,0,0" VerticalAlignment="Top" Width="128" Name="Curr"/>
+
+            <Slider HorizontalAlignment="Left" Margin="23,388,0,0" VerticalAlignment="Top" Width="564" Name="progBar" ValueChanged="valChange" Thumb.DragStarted="DragStarted" Thumb.DragCompleted="DragEnd"/>
+
+
         </Grid>
     </Grid>
 </Window>
